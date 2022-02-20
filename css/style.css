@@ -1,0 +1,27 @@
+body{
+    background-color: red;
+}
+
+section{
+    font-size: 20px;
+}
+
+/*.fancy-header {
+    color: purple; /* single line comment */
+/*    text-decoration: underline;
+}
+
+/*if certain (li) items need to be different colors, use a class ="name", then write tem out in the css directory that's linked to it.
+
+ */
+/*.declarative{
+    color: purple;
+ */
+/*.programming{
+    color: green;
+}
+ */
+/* element selector(ex. li),
+class selector(ex .programming)
+id selector(ex. #query)
+ */
