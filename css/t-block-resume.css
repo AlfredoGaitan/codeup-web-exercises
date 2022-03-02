@@ -1,0 +1,24 @@
+h1 {
+    letter-spacing: 5px;
+    color: royalblue;
+}
+h1, h2 {
+    text-align: center;
+}
+h3 {
+    color: gray;
+    font-weight: bolder;
+    margin-top: 25px;
+}
+ul#info {
+    margin-top: 30px;
+    padding-left: 0;
+    border-bottom: 5px solid #8fa573;
+}
+ul#info li {
+    list-style-type: none;
+
+}
+#phone {
+    font-size: 0.9em;
+}
