@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Exercises</title>
+</head>
+<body>
+<main id="container">
+<h1>jQuery exercises</h1>
+	<ol class="list">
+		<li>codeup</li>
+		<li>codeup</li>
+		<li>codeup</li>
+		<li>track</li>
+		<li>karate</li>
+	</ol>
+	<br>
+	<div id="some-div">My lecture div</div>
+	<p class="codeup">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aliquam, blanditiis consequuntur cum cumque delectus, eos et harum illum inventore ipsa laudantium, magni numquam obcaecati sapiente sunt veritatis! Fugiat!
+	</p>
+	<p class="codeup">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aliquam, blanditiis consequuntur cum cumque delectus, eos et harum illum inventore ipsa laudantium, magni numquam obcaecati sapiente sunt veritatis! Fugiat!
+	</p>
+<!--	<p class="codeup">This is a paragraph</p>-->
+	<ul class="list">
+		<li>brown</li>
+		<li>orange</li>
+		<li>white</li>
+		<li>hurdles</li>
+		<li>kicks</li>
+
+
+</main>
+
+<!--this is the CDN from website, preferred method-->
+<script
+		src="https://code.jquery.com/jquery-2.2.4.js"
+		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+		crossorigin="anonymous"></script>
+
+<!--<script src="js/jquery-2.2.4.js"></script>-->
+
+<script>
+	'use strict';
+//lecture example
+	// $(document).ready(function (){
+		// console.log($);
+		// console.log(jQuery);
+// 		$('h1').click(function (){
+// 			$('h1').html('Hello,Titan').css('color', 'red');
+// 		});
+// $('p').css('background', 'red')
+
+//Exercise results below
+
+//id selectors
+// 	alert($(#container).html());
+// 	$('.paragraph, p').css('font-weight', 'bold')
+//
+// //class selectors
+// $('.codeup').css('border', '1px solid red');
+// $('.codeup:first').removeClass('codeup');
+
+//element selectors
+	//$('li').css('font-size', '20px')
+	// $('h1').css('background-color', 'green')
+	// $('p').css('background-color', 'green')
+	// $('li').css('background-color', 'aqua')
+
+	// $('p').css({
+	// 	"background-color": "blue",
+	// 	"color": "yellow"
+	// });
+	// $('h1').css({
+	// 	"background-color": "blue",
+	// 	"color": "yellow"
+	// });
+	// $('li').css({
+	// 	"background-color": "blue",
+	// 	"color": "yellow"
+	// });
+	//alert($('h1').html());
+	// var h1Elements = $('h1');
+	// function getH1Elements(index, element) {
+	// 	alert(index + $(element).html())
+	// }
+	// h1Elements.each(getH1Elements)
+	//});
+//multiple selectors
+	$('h1, p, li').css("background-color", "yellow").css(
+			"color", "blue");
+
+
+
+	//
+</script>
+</ul>
+</body>
+</html>
