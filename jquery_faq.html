@@ -20,7 +20,7 @@
 
 		.invisible{
 			/*visibility: hidden;*/
-			display: none /*can also be used
+			display: none; /*can also be used*/
 		}
 
 
@@ -75,20 +75,56 @@
 	<dt>Can I drive my RV along the Going-to-the-Sun Road?</dt>
 	<dd class="invisible">Vehicles, and vehicle combinations, longer than 21 feet (including bumpers) or wider than 8 feet (including mirrors) are prohibited between Avalanche Campground and the Sun Point parking area. You may however, drive to Avalanche if traveling east, and to Sun Point, if traveling west. Vehicles over 10 feet in height may have difficulty driving west from Logan Pass due to rock overhangs. Stock trucks and trailers may access Packers Roost and Siyeh Bend.</dd>
 </dl>
+<h3 id="national-parks-heading">Carlsbad Caverns</h3>
+<ul id="national-parks1">
+	<li>Beautiful</li>
+	<li>wildlife</li>
+	<li>Camping</li>
+	<li>Daily tours</li>
 
-<button>Toggle Answers</button>
+</ul>
+<h3>Badlands</h3>
+<ul id="national-parks2">
+	<li>Beautiful</li>
+	<li>wildlife</li>
+	<li>Camping</li>
+	<li>Daily tours</li>
+</ul>
+<h3>Denali</h3>
+<ul id="national-parks3">
+	<li>Beautiful</li>
+	<li>wildlife</li>
+	<li>Camping</li>
+	<li>Daily tours</li>
+</ul>
+
+<button id="toggleBtn">Toggle Answers</button>
+<button id="parksBtn">National Parks</button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 	$(document).ready(function (){
-		$('button').click(function (){
+		$('#toggleBtn').click(function (){
 			$('dd').toggleClass('invisible')
 		});
 		$('dt').click(function (){
 			$('dt').removeClass('highlight')
 			$(this).addClass('highlight')
+		});
+		$('#parksBtn').click(function () {
+			$('ul').each(function (){
+				$(this).children().last().toggleClass('highlight')
+			})
+		});
+		$('h3').click(function (){
+			$(this).next().css('font-weight', 'bold')
+		});
+		$('ul').click(function (){
+			$(this).children().first().css('color', 'blue')
 		})
-	})
+		//document.ready ends here
+	});
+
 
 
 
