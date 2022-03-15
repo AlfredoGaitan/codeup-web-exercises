@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="UTF-8">
+	<title>First Mapbox Map</title>
+	<!-- Mapbox CSS -->
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+<!--	<link>pk.eyJ1IjoiYWdhaXRhbjc4IiwiYSI6ImNsMG1qY3hxYTB2ZGIza28zc3h0eGNzZ20ifQ.m1Nkv9WwMZ0LKWQH7BTJlw</link>-->
+
+	<!-- Custom CSS -->
+	<style>
+		#map {
+			/* the width and height may be set to any size */
+			width: 100%;
+			height: 800px;
+		}
+	</style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+<button id="zoom-btn">zoom to 18</button>
+<h1>Las Carettas</h1>
+<a href="">website</a>
+<p>address: </p>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/keys.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script>
+	'use strict'
+
+	 var restaurants = [
+		 {
+			 name: 'Las Carretas Mexican Restaurant',
+			 address: '3975 Perrin Central Blvd, San Antonio, TX 78217',
+			 website: 'https://lascarretasmexicanrestaurant.e-tab.com/lascarretasmexicanrestaurant/venue/6019c92b28f20e622480bc5c/menu'
+		 },
+		 {
+			 "name": "Vegas Test Kitchen",
+			 "address": "1020 E Fremont St #120, Las Vegas, NV 89101",
+			 "website": "https://vegastestkitchen.com/"
+		 },
+		 {
+			 "name": "Banger Brewing",
+			 "address": "450 E Fremont St #135, Las Vegas, NV 89101",
+			 "website": "http://bangerbrewing.com/"
+		 }
+	 ];
+
+
+
+
+
+	mapboxgl.accessToken = MAPBOX_KEY
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/streets-v9',
+		zoom: 10,
+		center: [-98.4916, 29.4252]
+	});
+
+
+	restaurants.forEach(function(restaurant) {
+		geocode(restaurant.address, MAPBOX_KEY).then(function(result) {
+			map.setCenter(result);
+
+	geocode('Las Carretas, San Antonio Tx', MAPBOX_KEY).then(function (results){
+		map.setCenter(results);
+
+
+		var popup = new mapboxgl.Popup().setHTML('<h1>Las Carettas</h1>\n' +
+				'<a href="">website</a>\n' +
+				'<p>address: ' + restaurants[0].address + '</p>'){
+
+
+		var marker = new mapboxgl.Marker()
+				.setPopup(popup)
+				.setLngLat(results)
+				.addTo(map);
+	});
+
+	$('#zoom-btn').click(function (){
+		map.setZoom(18);
+	});
+
+
+</script>
+</body>
+</html>
