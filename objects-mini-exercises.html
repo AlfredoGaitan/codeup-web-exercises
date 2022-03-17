@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objects Mini exercises</title>
+</head>
+<body>
+<h1>Objects Mini exercises</h1>
+<script>
+    // Create a file called objects-mini-exercises.html and include script tags to complete the following mini exercises:
+    //     -- Mini Exercise 1
+    // Create a few beverage objects and assign values to each object for the following properties:
+    //     - brandName
+    //     - type
+    //     - volumeInLiters
+    //     - priceInCents
+    //     - expirationDate
+    //     - datesOfPreviousSips (use an array of strings)
+    // - isOpen
+    // Define your objects using both literal syntax to create all properties and values at once and also try defining empty objects and assign property values in separate statements using the dot notation.
+
+	// var beverages = {}
+	// beverages.brandName = 'Pepsi';
+	// beverages.type = 'soda';
+	// beverages.volumeInLiters = 24;
+	// beverages.priceInCents = 99;
+	// beverages.exprationDate = '1/31/2023';
+	// beverages.datesOfPreviousSips = [2/09, 2/10];
+	// beverages.isOpen = 'Yes'
+	//
+    // console.log(beverages)
+	//
+	// var beverages = {
+    //     brandName: 'Big Red',
+	// 	type: 'Soda',
+	// 	volumeInLiters: 24,
+	// 	priceInCents: 99,
+	// 	expirationDate: '06/30/2022',
+	// 	datesOfPreviousSips: ['2/5, 2/7, 2/9'],
+    //     isOpen: 'Yes'
+	// }
+	//
+    // console.log(beverages);
+
+    // -- Mini Exercise 2
+
+    var users = [
+        {
+            givenName: 'Sam',
+            age: 21
+        },
+        {
+            givenName: 'Cathy',
+            age: 34
+        },
+        {
+            givenName: 'Karen',
+            age: 43
+        }
+    ];
+//get the total of all ages
+    console.log(users.age * 3);
+
+	//find the average of all ages of users
+	//log all the user info in the following format...
+		/*
+		user: Sam | age: 21
+		user: Cathy | age: 34
+		user: Karen | age: 43
+
+		 */
+
+
+
+
+
+
+  //   1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
+    console.log(users[0].givenName + '' + users[1].givenName + '' + users[2].givenName);
+	//
+	// var message = '';
+    // users.forEach(function (user){
+    //     message += user.givenName + '';
+	// });
+		''
+  //   2. Change the names of all users to “John Doe”
+    for(var i =0; i < users.length; i += 1){
+        users[i].givenName = 'JohnDoe'
+    }
+    console.log(users);
+
+
+
+	// users.forEach(function(name){
+    //     name.givenName = 'John Doe';
+	// });
+    //console.log(users);
+
+  // 3. Increase the current age of all users by 1
+    for(var i =0; i < users.length; i += 1){
+        users[i].age = users[i].age +1
+    }
+
+    users.age = age + 1;
+    //
+    console.log(users)
+
+
+  //   Can you accomplish each step using iteration?
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

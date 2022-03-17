@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Conditionals Mini Exercises</title>
+</head>
+<body>
+<script>
+    // CONDITIONALS MINI-EXERCISES
+
+    // 1. Create conditional logic to represent the following scenario...
+    // If the car is locked, alert 'will open', otherwise, alert 'will not open
+// 	var isCarLocked = false;
+// 	if (isCarLocked){
+//         alert('will not open');
+// } else {
+//         alert('will open');
+// }
+//(isCarLocked) ? alert('Will not open') : alert('Will open');
+
+    // 2. Write a function that takes in a string and returns a message based on the string length:
+
+
+    // if the string is no characters, return "Empty string"
+    // if the string is one character long, return "One character long"
+    // if the string is two characters long, return "Two characters long"
+    // Otherwise, return, "That is a long string!"
+
+// var str = '';
+// var strLengthMessage;
+// if(str.length === 0){
+//     strLengthMessage = 'empty string';
+// } else if (str.length === 1){
+//     strLengthMessage = 'One character long';
+// } else if (str.length === 2){
+//     strLengthMessage = 'two char long'
+// } else{
+//     strLengthMessage = 'that is a long str';
+// }
+// alert(strLengthMessage);
+//
+// function countCharLength(str){
+//     return 'empty str'
+// } else if (str.length === 1){
+//     resizeTo()
+// 	}
+
+
+    // var str = '';
+    // var strLengthMessage;
+    // if (str.length === 0) {
+    //     strLengthMessage = 'Empty string';
+    // } else if (str.length === 1) {
+    //     strLengthMessage = 'One character long';
+    // } else if (str.length === 2) {
+    //     strLengthMessage = 'Two characters long';
+    // } else {
+    //     strLengthMessage = 'That is a long string!';
+    // }
+	//
+    // alert(strLengthMessage);
+    // 3. Refactor the Following Code into a Ternary Operator:
+
+    	// var num = 100;
+		// var message = (num < 10) ? 'Num less than 10' : 'Num more than 10';
+		// console.log(message);
+
+		// if (num < 10) {
+		// 	message = 'Num less than 10';
+		// } else {
+		// 	message = 'Num more than 10';
+		// }
+/*
+    white_check_mark
+    +1
+    raised_hands
+
+ */
+//switch case
+	var bondFilm = 'Goldfinger';
+
+    switch (bondFilm){
+        case 'Dr. No':
+        	console.log('fantastic');
+        	break;
+        case 'from russia with love':
+        	console.log('exploding barrels!');
+        	break;
+        case 'you only live twice':
+        	console.log('one of the better theme songs');
+        default:
+            console.log('that\'s not one of the first five Bond films.');
+
+	}
+
+    // if (bondFilm === 'Dr. No');
+    // console.log('Fantastic');
+
+function isNegative(input){
+        return input < 0;
+}
+    // function isNegative(input){
+    //     if (input < 0){
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+function isPositive(input){
+        return input > 0;
+    }
+    // function isPositive(input){
+    //     if (input > 0){
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
+//practice assessment problems 5-10
+function isZero(input){
+        return input == 0;
+}
+
+// function isArray(input){
+//         return Array.isArray(input);
+// }
+
+
+function isArray(input){
+        return input instanceof Array;
+}
+
+function upperCase(input){
+        if(isString(input)){
+            return input.toUpperCase();
+        } else {
+            return false;
+		}
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

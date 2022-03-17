@@ -1,0 +1,75 @@
+body{
+    background-color: snow;
+    font-family: serif;
+    font-size: small;
+    background-image:url("../images/mountains.jpg");
+    background-attachment: fixed;
+    background-repeat: round;
+}
+/*multiple selectors*/
+h1, h2, h3, h4, h5 {
+    color: yellow;
+    text-decoration: underline;
+}
+
+p{
+    color: black;
+    font-size: large;
+}
+
+h5{
+    font-size: large;
+}
+
+td, th{
+    padding: 10px;
+    border: thin dotted line;
+}
+
+
+table {
+    font-size: 30px;
+    border: red;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: normal;
+    width: 100%;
+}
+
+th {
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+    background-color: ;
+}
+
+ul li{
+    list-style-type: lower-roman;
+}
+
+ol li{
+    list-style-type: decimal;
+}
+.fancy-header{
+    color: red;
+    text-decoration: underline;
+    text-align: center;
+}
+
+a:visited{
+    color: red;
+}
+
+/*psuedo selector
+a:link{
+    color: choose color here;
+}
+---links you've visited and are purple
+a:visited{
+    color:
+}
+when you hover over a link, changes color
+a:hover{
+    color:
+}
+ */

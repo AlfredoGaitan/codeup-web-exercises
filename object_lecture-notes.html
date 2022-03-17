@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objects Intro</title>
+</head>
+<body>
+<h1>Intro to Objects</h1>
+<script>
+    "use strict";
+    /*
+		JS Objects
+		- like a named index array
+		- used to store related state and behavior
+		- where arrays are good for storing lists of data, objects store related aspects of a greater structure
+		- we have already used objects: String, Array, Math, Number
+	 */
+    // Creating Objects (dog, user, forecast, dictionaryEntry, movie, post, etc.)
+
+    //New Object Instance
+
+    // var dog = new Object();
+    // console.log(typeof dog);
+	//
+    // // Object Literal Notation
+	//
+    // var cat = {};
+    // console.log(typeof cat);
+
+    // Setting Properties on a Custom Object
+    // create a pet object that has the following properties...
+    // givenName
+    // age
+    // species
+    // hasOffspring
+    // valueInDollars
+	// var pet = {};
+    // pet.givenName = 'Freckles';
+    // pet.ageInYears = 4;
+    // pet.species = 'Dog';
+    // pet.hasOffSpring = false;
+    // pet.valueInDollars = 2000;
+    // pet.isCute = true;
+    // pet.medicalHx = {};
+    // pet.howManyTreatsEaten = [];
+    // pet.medicalHx.vaccineRecords = [
+    //     'took rabies on 11/30/21,' +
+	// 	'took other shot on 11/30/22'
+	// ]
+	// pet.howManyTreatsEaten.push('bone');
+    // pet.howManyTreatsEaten.push('shoe);
+	//
+	//
+    // console.log(pet);
+
+	// var pet = {
+    //     givenName: 'Freckles',
+	// 	ageInYears: 4,
+	// 	Species: 'Dog'
+    // };
+	//
+    // var pet1 = {
+    //     givenName: 'Spot',
+    //     ageInYears: 2,
+    //     Species: 'Fish'
+	// };
+	//
+    // var pet2 = {
+    //     givenName: 'Jax',
+    //     ageInYears: 2,
+    //     Species: 'Dog'
+    // };
+	//
+    // console.log(pet2.givenName);
+    // console.log(pet2['givenName']);
+
+    // var pets = [pet, pet1, pet2];
+    // console.log(pets[0].givenName);
+
+    //console.log(pet.givenName);
+
+    //pet.ageInYears = 5;
+    //
+    //console.log(pet);
+
+    // pet.givenName = 'Freckles';
+    // pet.ageInYears = 4;
+    // pet.species = 'Dog';
+
+
+
+    // var pet = {};
+    //
+    // pet.givenName = 'Sparkles';
+    // pet.age = 12;
+    // pet.species = 'turtle';
+    // pet.hasOffspring = true;
+    // pet['value-in-dollars'] = 400; // alternative syntax for assigning properties
+    // console.log(pet);
+    // var pet2 = {
+    //     givenName: 'Rex',
+    //     age: 5,
+    //     species: 'dog',
+    //     hasOffspring: false,
+    //     valueInDollars: 'priceless'
+    // };
+    // Peeking into an Object
+    // console.log(pet);
+    // Accessing Properties on an Object
+    // console.log(pet.givenName);
+    // console.log(pet2.givenName);
+    // console.log(pet2['givenName']);
+    //
+    // pet.givenName = "Sabrina";
+    // console.log(pet.givenName);
+    // !! MINI-EXERCISE 1 !!
+    // Nested Values
+    // Add the following to a pet object...
+    // altNames
+    // vitals: averageTemp, restingHeartRate, isHungry
+    // var pet3 = {
+    //     name: 'Bowser',
+    //     age: 6,
+    //     species: 'dog',
+    //     hasOffspring: false,
+    //     valueInDollars: 'priceless',
+    //     altNames: [
+    //         'Bowser Boy',
+    //         'Bowser Man',
+    //         'Bowser Buddy',
+    //         'Puggle Wuggle Boy'
+    //     ],
+    //     vitals: {
+    //         averageTempDegF: 101,
+    //         averageRestingHeartRate: 80,
+    //         isHungry: true
+    //     }
+    // };
+    // // pet3.vitals
+	//
+	//
+    // // log if Bowser is hungry
+    // console.log(pet3.vitals.isHungry);
+	//
+    // // log Bowser's average heartRate
+    // console.log(pet3.vitals.averageRestingHeartRate);
+	//
+    // // log Bowser's most recent alternative name
+    // console.log(pet3.altNames[3]);
+	//
+    // // change age to 7 and isHungry to false
+    // pet3.age = 7;
+    // pet3.vitals.isHungry = false;
+	//
+    // console.log(pet3)
+
+    // Arrays of Objects
+	//
+    // var pets = [
+    //     {
+    //         givenName: 'Spot',
+    //         isDog: true
+    //     },
+    //     {
+    //         givenName: 'Max',
+    //         isDog: false
+    //     },
+    //     {
+    //         givenName: 'Goldy',
+    //         isDog: false
+    //     }
+    // ];
+    // for(var i =0; i < pets.length; i += 1){
+    //     console.log(pets[i].givenName);
+	// }
+	//
+    // //write the above with a For Each loop
+	// pets.forEach(function (pet){
+    //     console.log(pet.givenName);
+	// });
+
+    //change every pet's name to 'Bowser'
+	// pets.forEach(function(pet){
+    //     pet.givenName = 'Bowser';
+	// });
+//this was the solution prior to the 'for' code above, that's another way of getting the solution
+    // console.log(pets[0].givenName);
+    // console.log(pets[1].givenName);
+    // console.log(pets[2].givenName);
+
+	//Assigning Functionality to an object
+	//
+
+	var user = {
+        givenName: 'Joe',
+		age: 25,
+		sayHello: function (input){
+            console.log(input);
+		},
+		logAge: function (){
+            console.log(this.age);
+        },
+		getYounger: function (){
+            this.age = this.age - 1;
+		},
+		setAge: function (age){
+            this.age = age;
+		},
+		addProp: function (name, value){
+            this[name] = value;
+	}
+    }
+    user.addProp('username. ;jbomb');
+    console.log(user);
+
+	//}
+    //user.sayHello('Hello , Titan');
+    // user.logAge();
+    // user.getYounger();
+    // user.logAge();
+   	// user.setAge(100);
+   	// user.logAge();
+    //    user.getYounger();
+	// user.logAge();
+
+
+
+    // !! MINI EXERCISE 2 !!
+    // Getting a List of Object Keys as an array
+    // console.log(Object.keys(pet4));
+    // Assigning Functionality to an Object
+    // var pet4 = {
+    //     name: "Pickles",
+    //     age: 20,
+    //     species: "horse",
+    //     eat: function (food) {
+    //         console.log("nom nom nom " + food);
+    //     },
+    //     gallop: function() {
+    //         console.log("THUNK THUMP...THUNK THUMP!");
+    //     }
+    // };
+    //
+    // pet4.eat("carrots");
+    // pet4.gallop();
+    // The this Keyword
+    // var pet6 = {
+    //     name: "Sparky",
+    //     age: 3,
+    //     getOlder: function() {
+    //         console.log(this.age);
+    //         this.age += 1;
+    //     }
+    // };
+    //
+    // console.log(pet6.age);
+    // pet6.getOlder();
+    // console.log(pet6.age);
+    // why use this vs. the object name: https://stackoverflow.com/questions/12799702/javascript-this-versus-object-name
+    // !! MINI EXERCISE 3 !!
+</script>
+</body>
+</html></html>
