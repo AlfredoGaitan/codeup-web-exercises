@@ -680,14 +680,23 @@
 //
 // console.log(createFirstNamesArray(users));
 // //createFirstNamesArray(users); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
-// function remove9s(num){
-// 	var output = [];
-// 	num.forEach(function(num){
-// 		if (num === 9){
-// 		}else{
-// 			output.push(num)
-// 		return  output;
-// 	}
+
+//Assessment problems that I missed in 2nd JS exam:
+
+// function remove9s(nums) {
+// 	//create an output array
+// 	var output = []
+// 	//loop thru the input array and add non-nines to the output array
+// 	//return the output array
+// 	nums.forEach(function(num) {
+// 		if (num === 9) {
+// 			//do nothing
+// 		} else {
+// 			output.push(num);
+// 		}
+// 	})
+// 	return output
+// }
 
 
 //Justin solution
@@ -738,11 +747,51 @@
 
 //DOM warm-up, changing color of box on click button(2 ways to do it, .getElementById or .querySelector(must add # to selector, #changeColor)
 //var changeColorButton = document.getElementById('changeColor');
-var changeColorButton = document.querySelector('#changeColor');
-changeColorButton.addEventListener('click', function (){
-	document.getElementById('square').style.backgroundColor = 'red';
-})
-//this function is to reset back to original color when clicked
-document.getElementById('reset').addEventListener('click', function (){
-	location.reload()
-})
+// var changeColorButton = document.querySelector('#changeColor');
+// changeColorButton.addEventListener('click', function (){
+// 	document.getElementById('square').style.backgroundColor = 'red';
+// })
+// //this function is to reset back to original color when clicked
+// document.getElementById('reset').addEventListener('click', function (){
+// 	location.reload()
+// })
+
+//DOM warm-up. hover over to change color then back to original color when out of it:
+//vanilla JS
+document.querySelectorAll('.square').forEach(function (element){
+	element.addEventListener('mouseenter', function (){
+		const targetColor = event.target.dataset.color;
+		//console.log(targetColor);
+		event.target.style.backgroundColor = targetColor;
+	});
+	element.addEventListener('mouseleave', function (){
+		event.target.style.backgroundColor = '';
+	})
+});
+
+//jquery method:
+
+// $('.square').hover(function (){
+// 	console.log($(this).attr('data-color'));
+// 	const $targetColor = $(this).attr('data-color');
+// 	$(this).css('background-color', $targetColor);
+// }, function (){
+// 	$(this).css('background-color', '');
+// });
+
+
+//DOM warmup: change colors to yellow when clicked and then back to white when clicked again:
+
+//jquery solution:
+// $('#changingColors .square').on('click', function (){$(this).toggleClass('yellow')}
+// );
+
+//Vanilla JS solution:
+// const changingColorsSquares = document.querySelectorAll('#changingColors.square');
+//
+// function toggleColor(e){
+// 	!e.target.style.backgroundColor ? e.target.style.backgroundColor = 'yellow' : e.target.style.backgroundColor = '';
+// }
+//
+// changingColorsSquares.forEach(square => square.addEventListener('click', toggleColor));
+
